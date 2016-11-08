@@ -26,15 +26,16 @@ function trello(){
     contenedorParaBorrar.style.display='none';
 
     var containerTarjetas = document.getElementsByClassName("contenedorTarjetas")[0];
-    var botonParaLista = document.createElement("button");
-    var textoBotonListas= document.createTextNode("Añadir una tarjeta...");
+    var botonParaLista = document.createElement("textarea");
+    var textoBotonLista= document.createTextNode("Añadir una tarjeta...");
     botonParaLista.setAttribute("class", "botonAñadirTarjeta");
-    botonParaLista.appendChild(textoBotonListas);
+    botonParaLista.appendChild(textoBotonLista);
     containerTarjetas.appendChild(botonParaLista);
 
+    var botondelaTarjeta = document.getElementsByClassName("botonAñadirTarjeta")[0];
+    
 
 
-    //<button class="añadirTarjeta" onclick="tarjetas()">Añadir una tarjeta...</button>
 
   });
 
