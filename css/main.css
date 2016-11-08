@@ -1,3 +1,5 @@
+/*Sección listas*/
+
 .imgtrello{
 	height: 65px;
 	margin-top: 2%;
@@ -35,4 +37,44 @@
 	background-color: #5CB047;
 	color: #ffffff;
 	font-weight: bold;
+}
+
+.estiloTitulo{
+	padding-top: 5%;
+	padding-bottom: 5%;
+	padding-left: 5%;
+	font-weight: bold;
+	font-size: 18px;
+	background-color: #E2E4E6;
+}
+
+.contenedorGris{
+	background-color: #CDD2D4;
+}
+
+/*Sección tarjetas*/
+.contenedorTarjetas{
+	background-color: #E2E4E6;
+}
+
+.contenedorTarjetas:hover{
+	background-color: #CDD2D4;
+}
+
+.botonAñadirTarjeta{
+	background-color: #E2E4E6;
+	width: 90%;
+	height: 50%;
+	color: #000000;
+	margin-left: 5%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	border: #CDD2D4;
+	text-align: left;
+}
+
+.botonAñadirTarjeta:hover{
+	background-color: #CDD2D4;
+	color: #000000;
+	text-decoration: underline;
 }
