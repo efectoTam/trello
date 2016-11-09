@@ -19,7 +19,7 @@ function trello(){
     var nodoLista = document.createTextNode(nombreListaUsuario);
     var containerTitulo = document.getElementsByClassName("contenedorTitulo")[0];
     var pDeTitulo = document.createElement("p");
-    pDeTitulo.setAttribute("class", "estiloTitulo")
+    pDeTitulo.setAttribute("class", "estiloTitulo");
     pDeTitulo.appendChild(nodoLista);
     containerTitulo.appendChild(pDeTitulo);
     var contenedorParaBorrar= document.getElementsByClassName("estoSeBorra")[0];
@@ -27,10 +27,10 @@ function trello(){
 
     var containerTarjetas = document.getElementsByClassName("contenedorTarjetas")[0];
     var botonParaLista = document.createElement("textarea");
-    botonParaLista.setAttribute("class", "botonAñadirTarjeta");
+    botonParaLista.setAttribute("class", "textareaAñadirTarjeta");
     containerTarjetas.appendChild(botonParaLista);
 
-    var botondelaTarjeta = document.getElementsByClassName("botonAñadirTarjeta")[0];
+    var botondelaTarjeta = document.getElementsByClassName("textareaAñadirTarjeta")[0];
     
     botondelaTarjeta.addEventListener('click', function botonParaAñadir(){
       var elBotonAñadir = document.createElement("button");
@@ -39,10 +39,22 @@ function trello(){
       elBotonAñadir.appendChild(textoBotonAñadir);
       containerTarjetas.appendChild(elBotonAñadir);
       botondelaTarjeta.removeEventListener('click', botonParaAñadir);
+
+      var botonParaTarjeta = document.getElementsByClassName("botonTarjeta")[0];
+      botonParaTarjeta.addEventListener('click', function (){
+        var nombreTarjetaUsuario = document.getElementsByClassName("textareaAñadirTarjeta")[0].value;
+        var nodoTarjeta = document.createTextNode(nombreTarjetaUsuario);
+        var containerTarjeta = document.getElementsByClassName("contenedorTarjetas")[0];
+        var pDeTarjeta = document.createElement("p");
+        pDeTarjeta.setAttribute("class", "estiloTarjeta");
+        pDeTarjeta.appendChild(nodoTarjeta);
+        containerTarjeta.appendChild(pDeTarjeta);
+
+        //Ahora hacer que la tarjeta se ponga arriba!!
+
+
+      });
+
     });
-
-
-
-
   });
 }
