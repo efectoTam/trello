@@ -33,7 +33,7 @@ function trello(){
     
     	botondelaTarjeta.addEventListener('click', function botonParaAñadir(){
      		var elBotonAñadir = document.createElement("button");
-      		var textoBotonAñadir= document.createTextNode("Añadir");
+      		var textoBotonAñadir= document.createTextNode("Añadir tarjeta");
       		elBotonAñadir.setAttribute("class", "botonTarjeta");
       		elBotonAñadir.appendChild(textoBotonAñadir);
       		containerTarjetas.appendChild(elBotonAñadir);
