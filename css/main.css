@@ -78,3 +78,11 @@
 	color: #000000;
 	text-decoration: underline;
 }
+
+.botonTarjeta{
+	width: 100%;
+	height: 40px;
+	background-color: #5CB047;
+	color: #ffffff;
+	font-weight: bold;
+}

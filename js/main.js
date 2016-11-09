@@ -27,17 +27,22 @@ function trello(){
 
     var containerTarjetas = document.getElementsByClassName("contenedorTarjetas")[0];
     var botonParaLista = document.createElement("textarea");
-    var textoBotonLista= document.createTextNode("Añadir una tarjeta...");
     botonParaLista.setAttribute("class", "botonAñadirTarjeta");
-    botonParaLista.appendChild(textoBotonLista);
     containerTarjetas.appendChild(botonParaLista);
 
     var botondelaTarjeta = document.getElementsByClassName("botonAñadirTarjeta")[0];
     
+    botondelaTarjeta.addEventListener('click', function botonParaAñadir(){
+      var elBotonAñadir = document.createElement("button");
+      var textoBotonAñadir= document.createTextNode("Añadir");
+      elBotonAñadir.setAttribute("class", "botonTarjeta");
+      elBotonAñadir.appendChild(textoBotonAñadir);
+      containerTarjetas.appendChild(elBotonAñadir);
+      botondelaTarjeta.removeEventListener('click', botonParaAñadir);
+    });
+
 
 
 
   });
-
-
 }
