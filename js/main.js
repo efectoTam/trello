@@ -18,10 +18,11 @@ function trello(){
 	botonAgregarLista.addEventListener('click',function(){
 		var contenedorDeListas = document.getElementById('filaListas');
 		var nombreListaUsuario = document.getElementById('textareaLista').value;
+		document.getElementById('textareaLista').value="";
 
 		var todoListaIndividual = document.createElement('div');
 		todoListaIndividual.setAttribute('class', 'listaIndividual');
-		todoListaIndividual.setAttribute('class', 'col-xs-2 col-sm-2 col-md-2 col-lg-2');
+		todoListaIndividual.setAttribute('class', 'col-xs-3 col-sm-3 col-md-3 col-lg-3');
 
 		var pDeTitulo = document.createElement("p");
 		pDeTitulo.setAttribute("class", "estiloTitulo");
@@ -43,6 +44,7 @@ function trello(){
 
 		botonAñadir.addEventListener('click', function (){
 	      		var nombreTarjetaUsuario = document.getElementsByClassName("textareaAñadirTarjeta")[0].value;
+	      		document.getElementsByClassName("textareaAñadirTarjeta")[0].value="";
 	        	var nodoTarjeta = document.createTextNode(nombreTarjetaUsuario);
 	        	var containerTarjeta = document.getElementById("contenedorGrandeDos")[0];
 	        	var pDeTarjeta = document.createElement("p");
