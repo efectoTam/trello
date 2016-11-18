@@ -27,6 +27,9 @@ function trello(){
 		pDeTitulo.setAttribute("class", "estiloTitulo");
 		var nodoLista = document.createTextNode(nombreListaUsuario);
 
+		var textareaAñadirTarjeta = document.createElement("textarea");
+	    textareaAñadirTarjeta.setAttribute("class", "textareaAñadirTarjeta");
+
 		var botonAñadir = document.createElement("button");
 		botonAñadir.setAttribute("class", "botonTarjeta");
 		var textoBotonAñadir= document.createTextNode("Añadir tarjeta");
@@ -34,16 +37,19 @@ function trello(){
 		pDeTitulo.appendChild(nodoLista);
 		botonAñadir.appendChild(textoBotonAñadir);
 		todoListaIndividual.appendChild(pDeTitulo);
+		todoListaIndividual.appendChild(textareaAñadirTarjeta);
 		todoListaIndividual.appendChild(botonAñadir);
 		contenedorDeListas.appendChild(todoListaIndividual);
 
-		botonAñadir.addEventListener('click', function(){
-			var containerTarjeta = document.getElementById("contenedorGrandeDos");
-			var pDeTarjeta = document.createElement("textarea");
-			pDeTarjeta.setAttribute("id", "estiloTarjeta");
-	        var tareasDeTarjetas = document.getElementsByClassName("estiloTitulo")[0];
-	        tareasDeTarjetas.appendChild(pDeTarjeta);
-
+		botonAñadir.addEventListener('click', function (){
+	      		var nombreTarjetaUsuario = document.getElementsByClassName("textareaAñadirTarjeta")[0].value;
+	        	var nodoTarjeta = document.createTextNode(nombreTarjetaUsuario);
+	        	var containerTarjeta = document.getElementById("contenedorGrandeDos")[0];
+	        	var pDeTarjeta = document.createElement("p");
+	        	pDeTarjeta.setAttribute("class", "estiloTarjeta");
+	        	pDeTarjeta.appendChild(nodoTarjeta);
+	        	var tareasDeTarjetas = document.getElementsByClassName("estiloTitulo")[0];
+	        	tareasDeTarjetas.appendChild(pDeTarjeta);
 		});
 	});
 }
