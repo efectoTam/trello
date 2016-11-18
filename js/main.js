@@ -22,7 +22,7 @@ function trello(){
 
 		var todoListaIndividual = document.createElement('div');
 		todoListaIndividual.setAttribute('class', 'listaIndividual');
-		todoListaIndividual.setAttribute('class', 'col-xs-3 col-sm-3 col-md-3 col-lg-3');
+		todoListaIndividual.setAttribute('class', 'col-xs-2 col-sm-2 col-md-2 col-lg-2');
 
 		var pDeTitulo = document.createElement("p");
 		pDeTitulo.setAttribute("class", "estiloTitulo");
