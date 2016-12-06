@@ -1,57 +1,56 @@
 function trello(){
-	var contenedorGrandeUno = document.getElementById('contenedorGrandeUno');
-	var ocultar = document.getElementById('añadirLista');
-	ocultar.classList.toggle('borrar');
-	var contenedorGuardar = document.createElement('div');
-	contenedorGuardar.setAttribute('id', 'guardarLista');
+
+	var ocultarCol = document.getElementsByClassName('borrarCol')[0];
+	ocultarCol.classList.toggle('borrar');
+
+	var contenedorGuardarLista = document.createElement('div');
+	contenedorGuardarLista.setAttribute('class', 'guardarLista col-xs-2 col-sm-2 col-md-2 col-lg-2');
+
 	var textoAgregarLista = document.createElement("textarea");
 	textoAgregarLista.setAttribute("id", "textareaLista");
 	textoAgregarLista.setAttribute("placeholder", "Añadir una lista...");
+	textoAgregarLista.setAttribute("class", "input form-control");
+
 	var botonAgregarLista = document.createElement("button");
 	botonAgregarLista.setAttribute("class", "botonLista");
 	var textoBotonUno= document.createTextNode("Guardar");
+
 	botonAgregarLista.appendChild(textoBotonUno);
-	contenedorGuardar.appendChild(textoAgregarLista);
-	contenedorGuardar.appendChild(botonAgregarLista);
-	contenedorGrandeUno.appendChild(contenedorGuardar);
+	contenedorGuardarLista.appendChild(textoAgregarLista);
+	contenedorGuardarLista.appendChild(botonAgregarLista);
+	todasLasListas.appendChild(contenedorGuardarLista);
 
-	botonAgregarLista.addEventListener('click',function(){
-		var contenedorDeListas = document.getElementById('filaListas');
-		var nombreListaUsuario = document.getElementById('textareaLista').value;
-		document.getElementById('textareaLista').value="";
+	botonAgregarLista.addEventListener('click', function(){
+		var divTarea = document.getElementById('contenedorTodo');
+		var tituloLista = document.getElementById('textareaLista').value;
+		document.getElementById('textareaLista').value = "";
 
-		var todoListaIndividual = document.createElement('div');
-		todoListaIndividual.setAttribute('class', 'listaIndividual');
-		todoListaIndividual.setAttribute('class', 'col-xs-2 col-sm-2 col-md-2 col-lg-2');
+		if(tituloLista == "" || tituloLista == null){
+			alert("Debes ingresar el nombre de la lista");
+			return; 
+		}
+		
+		var columnaOrden = document.createElement('div');
+		columnaOrden.setAttribute('class', 'col-xs-2 col-sm-2 col-md-2 col-lg-2');
 
-		var pDeTitulo = document.createElement("p");
-		pDeTitulo.setAttribute("class", "estiloTitulo");
-		var nodoLista = document.createTextNode(nombreListaUsuario);
+		var tituloFinalLista = document.createElement('p');
+		tituloFinalLista.setAttribute('class','name-list estiloTitulo');
+		var textTarea = document.createTextNode(tituloLista);
 
-		var textareaAñadirTarjeta = document.createElement("textarea");
-	    textareaAñadirTarjeta.setAttribute("class", "textareaAñadirTarjeta");
+		var botonAñadirTarjeta = document.createElement('button');
+		botonAñadirTarjeta.setAttribute("class", "botonTarjeta");
+		var textoBotonTarjeta = document.createTextNode("Añadir Tarjeta");
 
-		var botonAñadir = document.createElement("button");
-		botonAñadir.setAttribute("class", "botonTarjeta");
-		var textoBotonAñadir= document.createTextNode("Añadir tarjeta");
+		divTarea.appendChild(columnaOrden);
+		columnaOrden.appendChild(tituloFinalLista);
+		tituloFinalLista.appendChild(textTarea);
+		columnaOrden.appendChild(botonAñadirTarjeta);
+		botonAñadirTarjeta.appendChild(textoBotonTarjeta);
 
-		pDeTitulo.appendChild(nodoLista);
-		botonAñadir.appendChild(textoBotonAñadir);
-		todoListaIndividual.appendChild(pDeTitulo);
-		todoListaIndividual.appendChild(textareaAñadirTarjeta);
-		todoListaIndividual.appendChild(botonAñadir);
-		contenedorDeListas.appendChild(todoListaIndividual);
-
-		botonAñadir.addEventListener('click', function (){
-	      		var nombreTarjetaUsuario = document.getElementsByClassName("textareaAñadirTarjeta")[0].value;
-	      		document.getElementsByClassName("textareaAñadirTarjeta")[0].value="";
-	        	var nodoTarjeta = document.createTextNode(nombreTarjetaUsuario);
-	        	var containerTarjeta = document.getElementById("contenedorGrandeDos")[0];
-	        	var pDeTarjeta = document.createElement("p");
-	        	pDeTarjeta.setAttribute("class", "estiloTarjeta");
-	        	pDeTarjeta.appendChild(nodoTarjeta);
-	        	var tareasDeTarjetas = document.getElementsByClassName("estiloTitulo")[0];
-	        	tareasDeTarjetas.appendChild(pDeTarjeta);
-		});
+   		botonAñadirTarjeta.addEventListener('click', function(){
+		   	var textTarjetas = document.createElement('textarea');		
+		   	textTarjetas.setAttribute("class", "textareaAñadirTarjeta");
+			tituloFinalLista.appendChild(textTarjetas);
+   		});
 	});
 }

@@ -1,42 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, user-scalable=1">
-		<title>Trello</title>
-	  	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	  	<link rel="stylesheet" type="text/css" href="css/main.css">
-	</head>
-	<body>
-		<div class= "container-fluid">
-			<header>
-				<div class="row titulo">
-					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
-					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-						<img class="imgtrello img-responsive" alt="Logo de Trello" src="img/logotrello.png">
-					</div>
-					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<hr class="linea">
-					</div>
-				</div>
-			</header>
+<head>
+	<meta charset="UTF-8">
+	<title>Trello</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
-			<section>
-				<div class="row">
-					<div id=filaListas></div>
-					<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-						<div id="añadirLista" onclick="trello()">Añadir una lista...</div>
-						<div id="contenedorGrandeUno"></div>
-						<div id="contenedorGrandeDos"></div>
-					</div>
-				</div>
-			</section>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<header class="container-fluid fondo">
+		<div class="row titulo">
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+				<img class="imgtrello img-responsive" alt="Logo de Trello" src="img/logotrello.png">
+			</div>
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
 		</div>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	    <script src="js/bootstrap.min.js"></script>
-	    <script type="text/javascript" src="js/main.js"></script>
-	</body>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<hr class="linea">
+			</div>
+		</div>
+	</header>
+
+	<section class="container-fluid backcolor">
+		<div class="row" id="todasLasListas">
+			<div id="contenedorTodo"></div>
+			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 borrarCol">
+				<button type="button" onclick="trello()" class="btn btn-info botonPrimero">Añadir una Lista</button>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
 </html>
