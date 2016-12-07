@@ -1,20 +1,10 @@
 .imgtrello{
-	height: 65px;
 	margin-top: 2%;
-	margin-left: 15%;
+	margin-left: 30%;
 }
 
 .titulo{
-	height: 70px;
-}
-
-body{
-
-	background-color: white;
-}
-
-.linea{
-	border-top: 3px solid #246A86;
+	background-color: #0067A3;
 }
 
 .botonPrimero{
@@ -22,11 +12,13 @@ body{
 	width: 100%;
 	height: 50%;
 	color: #A9C6D7;
+	border-color: transparent;
 }
 
 .botonPrimero:hover{
 	background-color: #005586;
 	color: #ffffff;
+	border-color: transparent;
 }
 
 .borrar{
@@ -35,25 +27,27 @@ body{
 
 #textareaLista{
 	width: 100%;
+	height: 35px;
 	margin-left: 0px;
 	margin-bottom: 0px;
 	margin-top: 0px;
+	border-radius: 0px;
 }
 
 .botonLista{
-	width: 100%;
-	height: 40px;
+	width: 50%;
+	height: 35px;
 	background-color: #5CB047;
 	color: #ffffff;
 	font-weight: bold;
+	border-color: transparent;
 }
 
 .estiloTitulo{
 	padding-top: 5%;
 	padding-bottom: 5%;
 	padding-left: 5%;
-	font-weight: bold;
-	font-size: 18px;
+	font-size: 14px;
 	background-color: #E2E4E6;
 }
 
@@ -76,4 +70,44 @@ body{
 	background-color: #5CB047;
 	color: #ffffff;
 	font-weight: bold;
+	border-color: transparent;
+}
+
+body{
+	background-color: #0079BF;
+}
+
+.tablero{
+	font-size: 16px;
+	color: #ffffff;
+	font-weight: bold;
+	margin-left: 2px;
+	display: inline;
+}
+
+.privado{
+	display: inline;
+	color: #ffffff;
+	font-size: 12px;
+}
+
+.marginTablero{
+	margin-top: 10px;
+}
+
+.icon-locked{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.icon-star{
+	display: inline;
+	font-size: 12px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.icon-cancel{
+	margin-left: 12px;
+	color: #E2E4E6;
 }

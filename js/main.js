@@ -15,9 +15,20 @@ function trello(){
 	botonAgregarLista.setAttribute("class", "botonLista");
 	var textoBotonUno= document.createTextNode("Guardar");
 
+	var iconocancelar=document.createElement("span");
+	iconocancelar.setAttribute("class", "icon-cancel");
+
+	$(document).ready(function(){
+		$(".icon-cancel").click(function(){
+			$(".borrarCol").toggleClass("borrar");
+			$(".guardarLista").remove();
+		});
+	});
+
 	botonAgregarLista.appendChild(textoBotonUno);
 	contenedorGuardarLista.appendChild(textoAgregarLista);
 	contenedorGuardarLista.appendChild(botonAgregarLista);
+	contenedorGuardarLista.appendChild(iconocancelar);
 	todasLasListas.appendChild(contenedorGuardarLista);
 
 	botonAgregarLista.addEventListener('click', function(){

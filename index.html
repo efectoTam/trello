@@ -3,34 +3,35 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Trello</title>
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="fonts/style.css"/>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 	<header class="container-fluid fondo">
 		<div class="row titulo">
-			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
-			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				<img class="imgtrello img-responsive" alt="Logo de Trello" src="img/logotrello.png">
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-5"></div>
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-2">
+				<img class="imgtrello img-responsive" alt="Logo de Trello" src="img/trellologo.png">
 			</div>
-			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-5"></div>
 		</div>
 		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<hr class="linea">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 marginTablero">
+				<p class="tablero">Nombre tablero <span class="icon-star"></span><p class="privado"><span class="icon-locked"></span>Privado</p></p>
 			</div>
 		</div>
 	</header>
-
 	<section class="container-fluid backcolor">
 		<div class="row" id="todasLasListas">
 			<div id="contenedorTodo"></div>
 			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 borrarCol">
-				<button type="button" onclick="trello()" class="btn btn-info botonPrimero">Añadir una Lista</button>
+				<button type="button" onclick="trello()" class="btn btn-info botonPrimero">Añadir una lista</button>
 			</div>
 		</div>
 	</section>
+	<script type='text/javascript' src='js/jquery-3.1.1.min.js'></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
