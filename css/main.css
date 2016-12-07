@@ -5,6 +5,7 @@
 
 .titulo{
 	background-color: #0067A3;
+	height: 40px;
 }
 
 .botonPrimero{
@@ -115,4 +116,20 @@ body{
 
 .padR{
 	padding-right: 0px;
+}
+
+.botonTableros{
+	margin-top: 5px;
+	font-weight: bold;
+	background-color: #5398C1 !important;
+	width: 50%;
+	color: #ffffff;
+	border-color: transparent;
+	font-size: 15px;
+}
+
+.icon-trello{
+	color: #ffffff;
+	font-size: 17px;
+	margin-right: 10px;
 }

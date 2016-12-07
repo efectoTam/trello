@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?vbavma');
-  src:  url('fonts/icomoon.eot?vbavma#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?vbavma') format('truetype'),
-    url('fonts/icomoon.woff?vbavma') format('woff'),
-    url('fonts/icomoon.svg?vbavma#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?e2bo5p');
+  src:  url('fonts/icomoon.eot?e2bo5p#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?e2bo5p') format('truetype'),
+    url('fonts/icomoon.woff?e2bo5p') format('woff'),
+    url('fonts/icomoon.svg?e2bo5p#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-trello:before {
+  content: "\e907";
+}
 .icon-locked:before {
   content: "\e900";
 }

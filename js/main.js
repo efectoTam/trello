@@ -6,10 +6,11 @@ function trello(){
 	var contenedorGuardarLista = document.createElement('div');
 	contenedorGuardarLista.setAttribute('class', 'guardarLista col-xs-2 col-sm-2 col-md-2 col-lg-2');
 
-	var textoAgregarLista = document.createElement("textarea");
+	var textoAgregarLista=document.createElement("input");
 	textoAgregarLista.setAttribute("id", "textareaLista");
+	textoAgregarLista.setAttribute("type", "text");
+	textoAgregarLista.setAttribute("class", "form-control");
 	textoAgregarLista.setAttribute("placeholder", "Añadir una lista...");
-	textoAgregarLista.setAttribute("class", "input form-control");
 
 	var botonAgregarLista = document.createElement("button");
 	botonAgregarLista.setAttribute("class", "botonLista");
@@ -59,8 +60,9 @@ function trello(){
 		botonAñadirTarjeta.appendChild(textoBotonTarjeta);
 
    		botonAñadirTarjeta.addEventListener('click', function(){
-		   	var textTarjetas = document.createElement('textarea');		
-		   	textTarjetas.setAttribute("class", "textareaAñadirTarjeta");
+		   	var textTarjetas=document.createElement("input");
+			textTarjetas.setAttribute("class", "form-control textareaAñadirTarjeta");
+			textTarjetas.setAttribute("type", "text");
 			tituloFinalLista.appendChild(textTarjetas);
    		});
 	});
