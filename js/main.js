@@ -42,7 +42,7 @@ function trello(){
 		}
 		
 		var columnaOrden = document.createElement('div');
-		columnaOrden.setAttribute('class', 'col-xs-2 col-sm-2 col-md-2 col-lg-2');
+		columnaOrden.setAttribute('class', 'col-xs-2 col-sm-2 col-md-2 col-lg-2 padR');
 
 		var tituloFinalLista = document.createElement('p');
 		tituloFinalLista.setAttribute('class','name-list estiloTitulo');
