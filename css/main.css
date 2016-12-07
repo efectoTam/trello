@@ -122,7 +122,7 @@ body{
 	margin-top: 5px;
 	font-weight: bold;
 	background-color: #5398C1 !important;
-	width: 50%;
+	width: 120%;
 	color: #ffffff;
 	border-color: transparent;
 	font-size: 15px;
@@ -132,4 +132,52 @@ body{
 	color: #ffffff;
 	font-size: 17px;
 	margin-right: 10px;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+
+.buscador{
+	margin-top: 5px;
+	background-color: #5398C1 !important;
+	color: #ffffff;
+	border-color: transparent;
+	border-radius: 3px;
+}
+
+.icon-search{
+	position: absolute;
+	font-size: 17px;
+	color: #ffffff;
+	margin-top: 10px;
+	margin-left: -23px;
+}
+
+.iconosDerecha{
+	width: 30px;
+	color: #ffffff;
+	font-size: 17px;
+	background-color: #5398C1;
+	padding: 6px;
+	margin-top: 7px;
+	margin-right: 10px;
+}
+
+.topIconos{
+	margin-top: 8px;
+}
+
+.botonUsuario{
+	margin-bottom: -2px;
+	font-weight: bold;
+	background-color: transparent;
+	color: #ffffff;
+	border-color: transparent;
+	font-size: 15px;
+	margin-right: 10px;
+}
+
+.extremo{
+	margin-left: 40px;
 }
