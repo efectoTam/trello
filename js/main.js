@@ -4,7 +4,7 @@ function trello(){
 	ocultarCol.classList.toggle('borrar');
 
 	var contenedorGuardarLista = document.createElement('div');
-	contenedorGuardarLista.setAttribute('class', 'guardarLista col-xs-2 col-sm-2 col-md-2 col-lg-2');
+	contenedorGuardarLista.setAttribute('class', 'guardarLista col-xs-12 col-sm-2 col-md-2 col-lg-2');
 
 	var textoAgregarLista=document.createElement("input");
 	textoAgregarLista.setAttribute("id", "textareaLista");
@@ -43,7 +43,7 @@ function trello(){
 		}
 		
 		var columnaOrden = document.createElement('div');
-		columnaOrden.setAttribute('class', 'col-xs-2 col-sm-2 col-md-2 col-lg-2');
+		columnaOrden.setAttribute('class', 'col-xs-12 col-sm-2 col-md-2 col-lg-2 distancia');
 
 		var tituloFinalLista = document.createElement('p');
 		tituloFinalLista.setAttribute('class','name-list estiloTitulo');

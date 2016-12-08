@@ -177,3 +177,58 @@ input[type=text]:focus {
 .extremo{
 	margin-left: 40px;
 }
+
+@media screen and (max-width:800px){
+	.botonTableros{
+		width: 120%;
+	}
+
+	.buscador{
+		width: 50%;
+		margin-top: 45px;
+	}
+
+	.icon-search{
+		margin-top: 50px;
+	}
+
+	.icon-info{
+		margin-right: 0px;
+	}
+
+	.input[type=text]:focus {
+    	width: 0%;
+	}
+
+	.titulo{
+		height: 120px;
+	}
+	
+	.imgtrello{
+		position: absolute;
+	}
+
+	.tabla{
+		margin-top: 40px;
+	}
+
+	.extremo{
+		margin-left: 0px;
+	}
+
+	#textareaLista{
+		margin-top: 25px;
+	}
+
+	.distancia{
+		margin-top: 20px; 
+	}
+
+	.estiloTitulo{
+		margin-bottom: 0px;
+	}
+
+	.botonPrimero{
+		margin-top: 20px;
+	}
+}
